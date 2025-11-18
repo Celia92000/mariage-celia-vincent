@@ -3,96 +3,189 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="min-h-screen toile-pattern">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
+    <main className="min-h-screen relative" style={{ backgroundColor: '#f5f9fb' }}>
+      {/* Motif toile de jouy en fond */}
+      <div className="fixed inset-0 pointer-events-none" style={{
+        backgroundImage: 'url(/toile-jouy-final.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.85
+      }}></div>
+
+      {/* Ornements dorés en coins - Comme sur le faire-part */}
+      <div className="fixed top-0 left-0 w-32 h-32 pointer-events-none opacity-30">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0 Q20 10 0 20 M0 0 Q10 20 20 0" stroke="#c9a961" strokeWidth="2" fill="none"/>
+          <circle cx="15" cy="15" r="2" fill="#c9a961"/>
+        </svg>
+      </div>
+      <div className="fixed top-0 right-0 w-32 h-32 pointer-events-none opacity-30 transform scale-x-[-1]">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0 Q20 10 0 20 M0 0 Q10 20 20 0" stroke="#c9a961" strokeWidth="2" fill="none"/>
+          <circle cx="15" cy="15" r="2" fill="#c9a961"/>
+        </svg>
+      </div>
+
+      {/* Photos du couple sur les côtés */}
+      <div className="fixed left-1/4 -translate-x-full top-1/2 pointer-events-none z-0">
+        <div className="relative p-1 rounded-xl" style={{
+          background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
+          boxShadow: '0 8px 30px rgba(201, 169, 97, 0.3)'
+        }}>
+          <img
+            src="/couple.jpg"
+            alt="Célia & Vincent"
+            className="rounded-lg w-48 h-64 md:w-56 md:h-72 object-cover"
+            style={{ border: '3px solid white', objectPosition: 'center 30%' }}
+          />
+        </div>
+      </div>
+
+      <div className="fixed right-1/4 translate-x-full top-1/2 pointer-events-none z-0">
+        <div className="relative p-1 rounded-xl" style={{
+          background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
+          boxShadow: '0 8px 30px rgba(201, 169, 97, 0.3)'
+        }}>
+          <img
+            src="/couple2.jpg"
+            alt="Célia & Vincent"
+            className="rounded-lg w-48 h-64 md:w-56 md:h-72 object-cover"
+            style={{ border: '3px solid white' }}
+          />
+        </div>
+      </div>
+
+      {/* Hero Section - Style faire-part */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-12 gold-frame text-center">
-            <h1 className="font-['var(--font-playfair)'] text-6xl md:text-8xl font-bold text-white mb-4 drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}>
-              VINCENT
-            </h1>
-            <div className="text-5xl text-gold my-6 font-['var(--font-playfair)']">&</div>
-            <h1 className="font-['var(--font-playfair)'] text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-lg" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.2)' }}>
-              CÉLIA
-            </h1>
+          {/* Carte principale avec cadre doré art déco */}
+          <div className="relative p-2 rounded-2xl" style={{
+            background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
+            boxShadow: '0 20px 60px rgba(201, 169, 97, 0.3)'
+          }}>
+            <div className="bg-white rounded-xl p-12 md:p-20 text-center relative overflow-hidden">
 
-            <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent my-8"></div>
+              {/* Noms - Style élégant comme le faire-part */}
+              <h1 className="font-['var(--font-playfair)'] text-7xl md:text-8xl font-bold mb-6 tracking-wide" style={{
+                color: '#6b95b8',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
+              }}>
+                VINCENT
+              </h1>
 
-            <p className="font-['var(--font-montserrat)'] text-xl md:text-2xl text-toile-blue mb-4 italic">
-              Vous invitent à célébrer leur mariage
-            </p>
+              {/* Séparateur doré élégant */}
+              <div className="flex items-center justify-center gap-6 my-8">
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent"></div>
+                <div className="font-['var(--font-playfair)'] text-5xl" style={{ color: '#c9a961' }}>&</div>
+                <div className="h-px w-16 bg-gradient-to-l from-transparent via-[#c9a961] to-transparent"></div>
+              </div>
 
-            <div className="my-6">
-              <p className="font-['var(--font-playfair)'] text-3xl font-semibold text-gold">
-                SAMEDI 20 JUIN
+              <h1 className="font-['var(--font-playfair)'] text-7xl md:text-8xl font-bold mb-12 tracking-wide" style={{
+                color: '#6b95b8',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
+              }}>
+                CÉLIA
+              </h1>
+
+              {/* Ligne dorée */}
+              <div className="h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent my-8"></div>
+
+              {/* Texte invitation */}
+              <p className="font-['var(--font-montserrat)'] text-xl md:text-2xl italic mb-12" style={{ color: '#6b95b8' }}>
+                Vous invitent à célébrer leur mariage
               </p>
-              <p className="font-['var(--font-playfair)'] text-5xl font-bold text-toile-blue my-2">
-                2026
+
+              {/* Date - Style carte élégante */}
+              <div className="inline-block px-10 py-6 mb-8 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(168, 197, 216, 0.1), rgba(244, 228, 193, 0.1))' }}>
+                <p className="font-['var(--font-playfair)'] text-3xl font-semibold mb-2" style={{ color: '#c9a961' }}>
+                  SAMEDI 20 JUIN
+                </p>
+                <p className="font-['var(--font-playfair)'] text-6xl font-bold my-3" style={{ color: '#6b95b8' }}>
+                  2026
+                </p>
+                <p className="font-['var(--font-montserrat)'] text-xl" style={{ color: '#999' }}>
+                  14:00
+                </p>
+              </div>
+
+              {/* Ligne dorée */}
+              <div className="h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent my-8"></div>
+
+              {/* Lieu */}
+              <p className="font-['var(--font-playfair)'] text-2xl italic mb-2" style={{ color: '#6b95b8' }}>
+                À l'ORANGERIE DU MOULIN
               </p>
-              <p className="font-['var(--font-montserrat)'] text-lg text-foreground/70">
-                14:00
+              <p className="font-['var(--font-montserrat)'] text-lg" style={{ color: '#999' }}>
+                77620 BRANSLES
               </p>
             </div>
+          </div>
 
-            <div className="h-px bg-gradient-to-r from-transparent via-gold to-transparent my-8"></div>
-
-            <p className="font-['var(--font-montserrat)'] text-lg md:text-xl text-toile-blue italic">
-              À l&apos;ORANGERIE DU MOULIN
-            </p>
-            <p className="font-['var(--font-montserrat)'] text-md text-foreground/70">
-              77620 BRANSLES
-            </p>
+          {/* Bouton CTA élégant */}
+          <div className="text-center mt-12">
+            <Link
+              href="/rsvp"
+              className="inline-block px-12 py-4 text-white font-['var(--font-montserrat)'] font-semibold text-lg rounded-full transition-all duration-300 hover:shadow-xl hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, #c9a961, #e8d4a0)',
+                boxShadow: '0 4px 20px rgba(201, 169, 97, 0.3)'
+              }}
+            >
+              Confirmer ma présence
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Countdown Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-['var(--font-playfair)'] text-4xl font-bold text-center text-gold mb-8">
-            Compte à rebours
-          </h2>
+      {/* Compte à rebours */}
+      <section className="relative py-12 px-4">
+        <div className="max-w-2xl mx-auto">
+          <div className="relative p-2 rounded-2xl mb-8" style={{
+            background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
+            boxShadow: '0 20px 60px rgba(201, 169, 97, 0.3)'
+          }}>
+            <div className="bg-white rounded-xl p-6 text-center">
+              <h2 className="font-['var(--font-playfair)'] text-3xl font-bold" style={{ color: '#c9a961' }}>
+                Compte à rebours
+              </h2>
+            </div>
+          </div>
           <Countdown />
         </div>
       </section>
 
-      {/* Info Cards */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 gold-frame">
-            <h3 className="font-['var(--font-playfair)'] text-2xl font-bold text-gold mb-4">
-              Thème du mariage
-            </h3>
-            <p className="font-['var(--font-montserrat)'] text-lg text-foreground italic">
-              Élégant
-            </p>
-          </div>
-
-          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 gold-frame">
-            <h3 className="font-['var(--font-playfair)'] text-2xl font-bold text-gold mb-4">
-              Dress Code
-            </h3>
-            <p className="font-['var(--font-montserrat)'] text-lg text-foreground mb-4">
-              Une petite touche de bleu clair ou de jaune pâle ou motif toile de jouy
-            </p>
-            <div className="flex gap-4 justify-center">
-              <div className="w-12 h-12 rounded-full bg-pale-yellow border-2 border-gold"></div>
-              <div className="w-12 h-12 rounded-full bg-toile-blue border-2 border-gold"></div>
-              <div className="w-12 h-12 rounded-full bg-gradient-to-br from-toile-blue to-white border-2 border-gold"></div>
+      {/* Info Cards - Style élégant */}
+      <section className="relative py-20 px-4 mb-20">
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+          {/* Thème */}
+          <div className="relative p-1.5 rounded-2xl" style={{ background: 'linear-gradient(135deg, #c9a961, #e8d4a0)' }}>
+            <div className="bg-white rounded-xl p-6 text-center">
+              <h3 className="font-['var(--font-playfair)'] text-2xl font-bold mb-3" style={{ color: '#c9a961' }}>
+                Thème du mariage
+              </h3>
+              <p className="font-['var(--font-playfair)'] text-2xl italic" style={{ color: '#6b95b8' }}>
+                Élégant
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <Link
-            href="/rsvp"
-            className="inline-block bg-gold hover:bg-gold/90 text-white font-['var(--font-montserrat)'] font-semibold text-lg px-12 py-4 rounded-full transition-all transform hover:scale-105 shadow-lg"
-          >
-            Confirmer ma présence
-          </Link>
+          {/* Dress Code */}
+          <div className="relative p-1.5 rounded-2xl" style={{ background: 'linear-gradient(135deg, #6b95b8, #a8c5d8)' }}>
+            <div className="bg-white rounded-xl p-6 text-center">
+              <h3 className="font-['var(--font-playfair)'] text-2xl font-bold mb-3" style={{ color: '#6b95b8' }}>
+                Dress Code
+              </h3>
+              <p className="font-['var(--font-montserrat)'] text-sm mb-4" style={{ color: '#666' }}>
+                Une petite touche de bleu clair ou de jaune pâle<br />ou motif toile de jouy
+              </p>
+              <div className="flex gap-4 justify-center">
+                <div className="w-10 h-10 rounded-full" style={{ backgroundColor: '#f4e4c1', border: '2px solid #c9a961', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}></div>
+                <div className="w-10 h-10 rounded-full" style={{ backgroundColor: '#a8c5d8', border: '2px solid #6b95b8', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}></div>
+                <div className="w-10 h-10 rounded-full" style={{ backgroundImage: 'url(/toile-jouy-final.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', border: '2px solid #c9a961', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' }}></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

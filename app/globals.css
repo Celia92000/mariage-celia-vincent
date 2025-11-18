@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f9fa;
-  --foreground: #2c3e50;
+  --background: #fafafa;
+  --foreground: #1a1a1a;
   --toile-blue: #a8c5d8;
   --pale-yellow: #f4e4c1;
-  --gold: #d4a574;
+  --gold: #c9a961;
   --white: #ffffff;
+  --cream: #fef9f3;
 }
 
 @theme inline {
@@ -16,26 +17,164 @@
   --color-pale-yellow: var(--pale-yellow);
   --color-gold: var(--gold);
   --color-white: var(--white);
+  --color-cream: var(--cream);
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  background: var(--cream);
   color: var(--foreground);
   font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
-/* Toile de Jouy Pattern Background */
+/* Toile de Jouy Pattern Background - Exact comme le faire-part */
 .toile-pattern {
-  background-image:
-    radial-gradient(circle at 20% 50%, rgba(168, 197, 216, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(168, 197, 216, 0.1) 0%, transparent 50%);
-  background-size: 200px 200px;
-  background-color: #f8f9fa;
+  position: relative;
+  background: linear-gradient(135deg, #e8f1f7 0%, #d4e5f0 100%);
 }
 
-/* Gold Art Deco Frame */
+.toile-pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23a8c5d8' opacity='0.15'%3E%3Cpath d='M50 30 Q60 20 70 30 T90 30' stroke='%23a8c5d8' fill='none' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='3'/%3E%3Cpath d='M120 80 Q130 70 140 80 L145 90 Q140 95 135 90 Z'/%3E%3Cpath d='M30 120 Q40 110 50 120 T70 120' stroke='%23a8c5d8' fill='none' stroke-width='1'/%3E%3Cpath d='M150 150 Q160 140 170 150 L175 160 Q170 165 165 160 Z'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg width='150' height='150' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%236b95b8' opacity='0.1'%3E%3Cpath d='M40 40 Q50 30 60 40 L65 50 Q60 55 55 50 Z'/%3E%3Ccircle cx='80' cy='80' r='2'/%3E%3Cpath d='M100 60 Q110 50 120 60 T140 60' stroke='%236b95b8' fill='none' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 200px 200px, 150px 150px;
+  background-position: 0 0, 75px 75px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+/* Ornements dorés comme sur le faire-part */
+.gold-ornament {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 10 Q25 5 50 10 T100 10' stroke='%23c9a961' fill='none' stroke-width='2'/%3E%3Ccircle cx='50' cy='10' r='3' fill='%23c9a961'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Gold Art Deco Frame - Modern Version */
 .gold-frame {
-  border: 3px solid var(--gold);
-  border-image: linear-gradient(45deg, #d4a574, #f4e4c1, #d4a574) 1;
-  box-shadow: 0 0 20px rgba(212, 165, 116, 0.3);
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow:
+    0 4px 24px rgba(201, 169, 97, 0.08),
+    0 0 0 1px rgba(201, 169, 97, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gold-frame:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(201, 169, 97, 0.12),
+    0 0 0 1px rgba(201, 169, 97, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Decorative Gold Border */
+.gold-border {
+  position: relative;
+  padding: 2px;
+  background: linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961);
+  border-radius: 16px;
+}
+
+.gold-border-content {
+  background: white;
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #c9a961 0%, #e8d4a0 50%, #c9a961 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Section Divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.3), transparent);
+  margin: 3rem 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #c9a961, #e8d4a0);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #b89850, #d9c590);
 }

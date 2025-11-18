@@ -10,8 +10,10 @@ export default function Countdown() {
     minutes: 0,
     secondes: 0,
   });
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const calculateTimeLeft = () => {
       const difference = weddingDate.getTime() - new Date().getTime();
 
@@ -31,15 +33,30 @@ export default function Countdown() {
     return () => clearInterval(timer);
   }, []);
 
+  if (!mounted) return null;
+
+  const units = [
+    { key: 'jours', label: 'Jours', color: '#a8c5d8' },
+    { key: 'heures', label: 'Heures', color: '#c9a961' },
+    { key: 'minutes', label: 'Minutes', color: '#a8c5d8' },
+    { key: 'secondes', label: 'Secondes', color: '#c9a961' },
+  ];
+
   return (
-    <div className="grid grid-cols-4 gap-4 text-center">
-      {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg gold-frame">
-          <div className="text-4xl font-bold text-gold font-['var(--font-playfair)']">
-            {value.toString().padStart(2, '0')}
-          </div>
-          <div className="text-sm text-foreground/70 font-['var(--font-montserrat)'] uppercase mt-2">
-            {unit}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {units.map(({ key, label, color }, index) => (
+        <div
+          key={key}
+          className="gold-frame p-4 text-center animate-fade-in-up"
+          style={{ animationDelay: `${index * 0.1}s` }}
+        >
+          <div className="relative">
+            <div className="text-3xl md:text-4xl font-bold font-['var(--font-playfair)'] mb-2" style={{ color }}>
+              {timeLeft[key as keyof typeof timeLeft].toString().padStart(2, '0')}
+            </div>
+            <div className="text-xs font-['var(--font-montserrat)'] uppercase tracking-wider" style={{ color: '#999' }}>
+              {label}
+            </div>
           </div>
         </div>
       ))}
