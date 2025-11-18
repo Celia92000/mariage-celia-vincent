@@ -48,15 +48,15 @@ export default function Programme() {
       }}></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="relative p-2 rounded-2xl mb-16 animate-fade-in" style={{
+        <div className="relative p-2 rounded-2xl mb-12 sm:mb-16 animate-fade-in" style={{
           background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
           boxShadow: '0 20px 60px rgba(201, 169, 97, 0.3)'
         }}>
-          <div className="bg-white rounded-xl p-12 text-center">
-            <h1 className="font-['var(--font-playfair)'] text-5xl md:text-6xl font-bold gradient-text mb-6">
+          <div className="bg-white rounded-xl p-6 sm:p-12 text-center">
+            <h1 className="font-['var(--font-playfair)'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold gradient-text mb-4 sm:mb-6">
               Programme du mariage
             </h1>
-            <p className="font-['var(--font-montserrat)'] text-lg" style={{ color: '#666' }}>
+            <p className="font-['var(--font-montserrat)'] text-base sm:text-lg px-4" style={{ color: '#666' }}>
               Trois jours de célébration pour partager notre bonheur
             </p>
           </div>
@@ -66,23 +66,23 @@ export default function Programme() {
           {events.map((event, eventIndex) => (
             <div
               key={event.title}
-              className="gold-frame p-8 md:p-12 animate-fade-in-up"
+              className="gold-frame p-6 sm:p-8 md:p-12 animate-fade-in-up"
               style={{ animationDelay: `${eventIndex * 0.2}s` }}
             >
               {/* Header */}
-              <div className="text-center mb-10">
+              <div className="text-center mb-8 sm:mb-10">
                 <div
-                  className="inline-block px-8 py-3 rounded-full mb-4"
+                  className="inline-block px-4 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full mb-3 sm:mb-4"
                   style={{ backgroundColor: `${event.color}20` }}
                 >
-                  <p className="font-['var(--font-montserrat)'] text-xl font-semibold uppercase tracking-wider" style={{ color: event.color }}>
+                  <p className="font-['var(--font-montserrat)'] text-base sm:text-lg md:text-xl font-semibold uppercase tracking-wider" style={{ color: event.color }}>
                     {event.date}
                   </p>
                 </div>
-                <h2 className="font-['var(--font-playfair)'] text-4xl font-bold mb-3" style={{ color: event.color }}>
+                <h2 className="font-['var(--font-playfair)'] text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-3" style={{ color: event.color }}>
                   {event.title}
                 </h2>
-                <p className="font-['var(--font-montserrat)'] text-lg" style={{ color: '#999' }}>
+                <p className="font-['var(--font-montserrat)'] text-sm sm:text-base md:text-lg px-4" style={{ color: '#999' }}>
                   📍 {event.location}
                 </p>
               </div>

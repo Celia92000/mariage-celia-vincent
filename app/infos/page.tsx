@@ -171,10 +171,10 @@ export default function Infos() {
   return (
     <main className="min-h-screen toile-pattern py-20 px-4">
       <div className="max-w-5xl mx-auto">
-        <h1 className="font-['var(--font-playfair)'] text-5xl md:text-6xl font-bold text-center gradient-text mb-6 animate-fade-in">
+        <h1 className="font-['var(--font-playfair)'] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center gradient-text mb-6 animate-fade-in">
           Informations pratiques
         </h1>
-        <p className="text-center font-['var(--font-montserrat)'] text-lg mb-16 animate-fade-in" style={{ color: '#666', animationDelay: '0.2s' }}>
+        <p className="text-center font-['var(--font-montserrat)'] text-base sm:text-lg mb-12 sm:mb-16 animate-fade-in px-4" style={{ color: '#666', animationDelay: '0.2s' }}>
           Tout ce que vous devez savoir pour profiter pleinement de cette journée
         </p>
 

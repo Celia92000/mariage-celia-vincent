@@ -27,8 +27,8 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* Photos du couple sur les côtés */}
-      <div className="fixed left-1/4 -translate-x-full top-1/2 pointer-events-none z-0">
+      {/* Photos du couple sur les côtés - cachées sur mobile */}
+      <div className="hidden xl:block fixed left-1/4 -translate-x-full top-1/2 pointer-events-none z-0">
         <div className="relative p-1 rounded-xl" style={{
           background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
           boxShadow: '0 8px 30px rgba(201, 169, 97, 0.3)'
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="fixed right-1/4 translate-x-full top-1/2 pointer-events-none z-0">
+      <div className="hidden xl:block fixed right-1/4 translate-x-full top-1/2 pointer-events-none z-0">
         <div className="relative p-1 rounded-xl" style={{
           background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
           boxShadow: '0 8px 30px rgba(201, 169, 97, 0.3)'
@@ -64,10 +64,10 @@ export default function Home() {
             background: 'linear-gradient(135deg, #c9a961, #e8d4a0, #c9a961)',
             boxShadow: '0 20px 60px rgba(201, 169, 97, 0.3)'
           }}>
-            <div className="bg-white rounded-xl p-12 md:p-20 text-center relative overflow-hidden">
+            <div className="bg-white rounded-xl p-6 sm:p-12 md:p-20 text-center relative overflow-hidden">
 
               {/* Noms - Style élégant comme le faire-part */}
-              <h1 className="font-['var(--font-playfair)'] text-7xl md:text-8xl font-bold mb-6 tracking-wide" style={{
+              <h1 className="font-['var(--font-playfair)'] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-wide" style={{
                 color: '#6b95b8',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
               }}>
@@ -75,13 +75,13 @@ export default function Home() {
               </h1>
 
               {/* Séparateur doré élégant */}
-              <div className="flex items-center justify-center gap-6 my-8">
-                <div className="h-px w-16 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent"></div>
-                <div className="font-['var(--font-playfair)'] text-5xl" style={{ color: '#c9a961' }}>&</div>
-                <div className="h-px w-16 bg-gradient-to-l from-transparent via-[#c9a961] to-transparent"></div>
+              <div className="flex items-center justify-center gap-4 sm:gap-6 my-6 sm:my-8">
+                <div className="h-px w-12 sm:w-16 bg-gradient-to-r from-transparent via-[#c9a961] to-transparent"></div>
+                <div className="font-['var(--font-playfair)'] text-3xl sm:text-4xl md:text-5xl" style={{ color: '#c9a961' }}>&</div>
+                <div className="h-px w-12 sm:w-16 bg-gradient-to-l from-transparent via-[#c9a961] to-transparent"></div>
               </div>
 
-              <h1 className="font-['var(--font-playfair)'] text-7xl md:text-8xl font-bold mb-12 tracking-wide" style={{
+              <h1 className="font-['var(--font-playfair)'] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 sm:mb-12 tracking-wide" style={{
                 color: '#6b95b8',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
               }}>
@@ -92,31 +92,31 @@ export default function Home() {
               <div className="h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent my-8"></div>
 
               {/* Texte invitation */}
-              <p className="font-['var(--font-montserrat)'] text-xl md:text-2xl italic mb-12" style={{ color: '#6b95b8' }}>
+              <p className="font-['var(--font-montserrat)'] text-lg sm:text-xl md:text-2xl italic mb-8 sm:mb-12" style={{ color: '#6b95b8' }}>
                 Vous invitent à célébrer leur mariage
               </p>
 
               {/* Date - Style carte élégante */}
-              <div className="inline-block px-10 py-6 mb-8 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(168, 197, 216, 0.1), rgba(244, 228, 193, 0.1))' }}>
-                <p className="font-['var(--font-playfair)'] text-3xl font-semibold mb-2" style={{ color: '#c9a961' }}>
+              <div className="inline-block px-6 sm:px-10 py-4 sm:py-6 mb-6 sm:mb-8 rounded-xl" style={{ background: 'linear-gradient(135deg, rgba(168, 197, 216, 0.1), rgba(244, 228, 193, 0.1))' }}>
+                <p className="font-['var(--font-playfair)'] text-xl sm:text-2xl md:text-3xl font-semibold mb-2" style={{ color: '#c9a961' }}>
                   SAMEDI 20 JUIN
                 </p>
-                <p className="font-['var(--font-playfair)'] text-6xl font-bold my-3" style={{ color: '#6b95b8' }}>
+                <p className="font-['var(--font-playfair)'] text-4xl sm:text-5xl md:text-6xl font-bold my-3" style={{ color: '#6b95b8' }}>
                   2026
                 </p>
-                <p className="font-['var(--font-montserrat)'] text-xl" style={{ color: '#999' }}>
+                <p className="font-['var(--font-montserrat)'] text-lg sm:text-xl" style={{ color: '#999' }}>
                   14:00
                 </p>
               </div>
 
               {/* Ligne dorée */}
-              <div className="h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent my-8"></div>
+              <div className="h-px bg-gradient-to-r from-transparent via-[#c9a961] to-transparent my-6 sm:my-8"></div>
 
               {/* Lieu */}
-              <p className="font-['var(--font-playfair)'] text-2xl italic mb-2" style={{ color: '#6b95b8' }}>
+              <p className="font-['var(--font-playfair)'] text-xl sm:text-2xl italic mb-2" style={{ color: '#6b95b8' }}>
                 À l'ORANGERIE DU MOULIN
               </p>
-              <p className="font-['var(--font-montserrat)'] text-lg" style={{ color: '#999' }}>
+              <p className="font-['var(--font-montserrat)'] text-base sm:text-lg" style={{ color: '#999' }}>
                 77620 BRANSLES
               </p>
             </div>
