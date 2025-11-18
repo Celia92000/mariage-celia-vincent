@@ -1,99 +1,9 @@
 export default function Hebergements() {
   const hebergements = [
     {
-      nom: 'Le moulin du Mez',
-      contact: 'Florence - 06.15.16.07.57',
-      adresse: 'Le Moulin du Mez 45680 DORDIVES',
-      distance: '5 min',
-      capacite: '3 lits doubles, 2 salles de bain',
-      prix: '450€ (2 nuits) ou 520€ (3 nuits)',
-      site: null,
-      type: 'Gîte',
-    },
-    {
-      nom: "L'Orée du Chêne",
-      contact: 'Brigitte et Michel Bauwens - 06 79 84 84 89',
-      adresse: '1 bis hameau de La Brosse 77620 BRANSLES',
-      distance: '5 min',
-      capacite: '2 chambres + 1 convertible 2 pers',
-      prix: '200€ la nuit',
-      site: null,
-      type: 'Gîte',
-    },
-    {
-      nom: 'Au Domaine Des Roses',
-      contact: 'Pascal - 01 60 55 09 81 / 06 07 04 71 46',
-      adresse: '6 Rue du Marais Brûle, 77460 Souppes-sur-Loing',
-      distance: '13 min',
-      capacite: '5 chambres (3-4 pers/chambre)',
-      prix: '68€ à 129€ avec petit dej',
-      site: 'https://domainedesroses.wordpress.com/',
-      type: 'Chambres d\'hôtes',
-    },
-    {
-      nom: 'La grange des blins',
-      contact: 'Bruno - 03 86 97 56 19 / 06 83 56 07 67',
-      adresse: '4 les Blins 89150 JOUY',
-      distance: '18-23 min',
-      capacite: '3 chambres + 1 gîte + grenier',
-      prix: '70€ à 90€ la nuit',
-      site: 'https://lagrangedesblins.fr',
-      type: 'Gîte',
-    },
-    {
-      nom: 'Le Gîte de groupe Le gué aux filles',
-      contact: 'Christophe - 07 76 72 42 81',
-      adresse: '18 Route du Moulin Neuf - 45210 Chevannes',
-      distance: '7 min',
-      capacite: '9 chambres + 1 duplex + 2 dortoirs',
-      prix: '3120€ (2 nuits)',
-      site: 'https://www.grandsgites.com/gite-50-gue-desfilles-365.htm',
-      type: 'Gîte de groupe',
-    },
-    {
-      nom: 'Gîte des Hoctins',
-      contact: 'Béatrice & Jean-Pierre - 06 83 21 97 14 / 06 82 26 87 47',
-      adresse: '1, Chemin des Hoctins 45210 CHEVANNES',
-      distance: '7 min',
-      capacite: '3 chambres (1 lit 140 + 1 lit 140 + 2 lits 90)',
-      prix: 'À partir de 60€ la nuit',
-      site: 'https://www.gites-de-france.com/fr/centre-val-deloire/loiret/gite-des-hoctins-h45g021240',
-      type: 'Gîte',
-    },
-    {
-      nom: "L'Allée du Quatre",
-      contact: 'Marie-Juliette et Georges Vellien - 06 50 66 03 46',
-      adresse: '4, Rue du 21 août 77460 SOUPPES SUR LOING',
-      distance: '13 min',
-      capacite: 'Studio + longère 10-14 pers',
-      prix: '830€ (2 nuits)',
-      site: 'www.lalleeduquatre.fr',
-      type: 'Gîte',
-    },
-    {
-      nom: 'Le Moulin de Madame',
-      contact: 'Catherine et Philippe Bauwens - 06 10 42 46 19',
-      adresse: 'Bransles',
-      distance: '5 min',
-      capacite: '4 chambres + canapé (8 pers) ou moulin (3 chambres + dortoir)',
-      prix: 'env 1700€ (2 nuits)',
-      site: 'https://www.airbnb.fr/rooms/44698823',
-      type: 'Gîte',
-    },
-    {
-      nom: 'Les hébergements insolites du Danica',
-      contact: 'Dominique et Delphine - 02 38 92 28 80',
-      adresse: 'Chem. du Puits, 45680 Dordives',
-      distance: '8 min',
-      capacite: 'Roulottes et cabanes - 16 pers',
-      prix: '40 à 70€ la nuit',
-      site: 'https://www.ledanica.com/',
-      type: 'Hébergement insolite',
-    },
-    {
       nom: 'Au chant du coq',
       contact: 'Paulette et Bernard - 06 60 02 86 07',
-      adresse: 'Rue de la Vallée aux Chats, Les Canivelles 77620 BRANSLES',
+      adresse: 'Rue de la Vallée aux Chats, Les Canivelles - 77620 BRANSLES',
       distance: '2 min',
       capacite: 'Gîte 5 personnes',
       prix: '150€ la nuit',
@@ -103,7 +13,7 @@ export default function Hebergements() {
     {
       nom: 'Les plumes de Vallombreuse',
       contact: 'Hélène - 07 75 21 77 81',
-      adresse: '3 Rue du Bois Maréchal, Bransles',
+      adresse: '3 Rue du Bois Maréchal - BRANSLES',
       distance: '2 min',
       capacite: 'Gîte 6 pers + chambres d\'hôtes',
       prix: '180€ (gîte) / 90€ (chambre)',
@@ -111,9 +21,79 @@ export default function Hebergements() {
       type: 'Gîte & Chambres d\'hôtes',
     },
     {
+      nom: 'Le moulin du Mez',
+      contact: 'Florence - 06.15.16.07.57',
+      adresse: 'Le Moulin du Mez - 45680 DORDIVES',
+      distance: '5 min',
+      capacite: '3 lits doubles, 2 salles de bain',
+      prix: '450€ (2 nuits) ou 520€ (3 nuits)',
+      site: null,
+      type: 'Gîte',
+    },
+    {
+      nom: "L'Orée du Chêne",
+      contact: 'Brigitte et Michel Bauwens - 06 79 84 84 89',
+      adresse: '1 bis hameau de La Brosse - 77620 BRANSLES',
+      distance: '5 min',
+      capacite: '2 chambres + 1 convertible 2 pers',
+      prix: '200€ la nuit',
+      site: null,
+      type: 'Gîte',
+    },
+    {
+      nom: 'Le Moulin de Madame',
+      contact: 'Catherine et Philippe Bauwens - 06 10 42 46 19',
+      adresse: 'BRANSLES',
+      distance: '5 min',
+      capacite: '4 chambres + canapé (8 pers) ou moulin (3 chambres + dortoir)',
+      prix: 'env 1700€ (2 nuits)',
+      site: 'https://www.airbnb.fr/rooms/44698823',
+      type: 'Gîte',
+    },
+    {
+      nom: 'Le Gîte de groupe Le gué aux filles',
+      contact: 'Christophe - 07 76 72 42 81',
+      adresse: '18 Route du Moulin Neuf - 45210 CHEVANNES',
+      distance: '7 min',
+      capacite: '9 chambres + 1 duplex + 2 dortoirs',
+      prix: '3120€ (2 nuits)',
+      site: 'https://www.grandsgites.com/gite-50-gue-desfilles-365.htm',
+      type: 'Gîte de groupe',
+    },
+    {
+      nom: 'Gîte des Hoctins',
+      contact: 'Béatrice & Jean-Pierre - 06 83 21 97 14 / 06 82 26 87 47',
+      adresse: '1, Chemin des Hoctins - 45210 CHEVANNES',
+      distance: '7 min',
+      capacite: '3 chambres (1 lit 140 + 1 lit 140 + 2 lits 90)',
+      prix: 'À partir de 60€ la nuit',
+      site: 'https://www.gites-de-france.com/fr/centre-val-deloire/loiret/gite-des-hoctins-h45g021240',
+      type: 'Gîte',
+    },
+    {
+      nom: "L'Echappée Belle",
+      contact: 'Dan',
+      adresse: '7 Rue de la Forge - 45210 CHEVANNES',
+      distance: '7 min',
+      capacite: '6 chambres, 8 lits, 2 salles de bain',
+      prix: '850€',
+      site: 'https://www.airbnb.fr/rooms/557017226184281783',
+      type: 'Gîte',
+    },
+    {
+      nom: 'Les hébergements insolites du Danica',
+      contact: 'Dominique et Delphine - 02 38 92 28 80',
+      adresse: 'Chem. du Puits - 45680 DORDIVES',
+      distance: '8 min',
+      capacite: 'Roulottes et cabanes - 16 pers',
+      prix: '40 à 70€ la nuit',
+      site: 'https://www.ledanica.com/',
+      type: 'Hébergement insolite',
+    },
+    {
       nom: "Hôtel de l'abbaye",
       contact: '02 38 96 53 12',
-      adresse: 'Rue des Trois Platanes, 45210 Ferrières-en-Gâtinais',
+      adresse: 'Rue des Trois Platanes - 45210 FERRIÈRES-EN-GÂTINAIS',
       distance: '10 min',
       capacite: '32 chambres',
       prix: '90€ à 100€ la nuit',
@@ -123,7 +103,7 @@ export default function Hebergements() {
     {
       nom: "Gite de l'atelier",
       contact: 'Gaelle et Nicolas',
-      adresse: 'Égreville',
+      adresse: 'ÉGREVILLE',
       distance: '10 min',
       capacite: '4 chambres, 6 lits, 8 personnes',
       prix: '430€ (2 nuits)',
@@ -131,13 +111,33 @@ export default function Hebergements() {
       type: 'Gîte',
     },
     {
-      nom: "L'Echappée Belle",
-      contact: 'Dan',
-      adresse: '7 Rue de la Forge - 45210 Chevannes',
-      distance: '7 min',
-      capacite: '6 chambres, 8 lits, 2 salles de bain',
-      prix: '850€',
-      site: 'https://www.airbnb.fr/rooms/557017226184281783',
+      nom: 'Au Domaine Des Roses',
+      contact: 'Pascal - 01 60 55 09 81 / 06 07 04 71 46',
+      adresse: '6 Rue du Marais Brûle - 77460 SOUPPES-SUR-LOING',
+      distance: '13 min',
+      capacite: '5 chambres (3-4 pers/chambre)',
+      prix: '68€ à 129€ avec petit dej',
+      site: 'https://domainedesroses.wordpress.com/',
+      type: 'Chambres d\'hôtes',
+    },
+    {
+      nom: "L'Allée du Quatre",
+      contact: 'Marie-Juliette et Georges Vellien - 06 50 66 03 46',
+      adresse: '4, Rue du 21 août - 77460 SOUPPES-SUR-LOING',
+      distance: '13 min',
+      capacite: 'Studio + longère 10-14 pers',
+      prix: '830€ (2 nuits)',
+      site: 'www.lalleeduquatre.fr',
+      type: 'Gîte',
+    },
+    {
+      nom: 'La grange des blins',
+      contact: 'Bruno - 03 86 97 56 19 / 06 83 56 07 67',
+      adresse: '4 les Blins - 89150 JOUY',
+      distance: '18-23 min',
+      capacite: '3 chambres + 1 gîte + grenier',
+      prix: '70€ à 90€ la nuit',
+      site: 'https://lagrangedesblins.fr',
       type: 'Gîte',
     },
   ];
@@ -175,9 +175,18 @@ export default function Hebergements() {
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
                 <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-3" style={{ backgroundColor: '#a8c5d820', color: '#a8c5d8' }}>
-                    {hebergement.type}
-                  </span>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold" style={{ backgroundColor: '#a8c5d820', color: '#a8c5d8' }}>
+                      {hebergement.type}
+                    </span>
+                    <span className="inline-block px-3 py-1.5 rounded-full text-xs font-bold" style={{
+                      background: 'linear-gradient(135deg, #c9a961, #e8d4a0)',
+                      color: 'white',
+                      boxShadow: '0 2px 4px rgba(201, 169, 97, 0.3)'
+                    }}>
+                      🚗 {hebergement.distance}
+                    </span>
+                  </div>
                   <h3 className="font-['var(--font-playfair)'] text-xl font-bold mb-2" style={{ color: '#1a1a1a' }}>
                     {hebergement.nom}
                   </h3>
@@ -189,9 +198,6 @@ export default function Hebergements() {
                   </p>
                   <p style={{ color: '#666' }}>
                     📍 {hebergement.adresse}
-                  </p>
-                  <p style={{ color: '#666' }}>
-                    🚗 {hebergement.distance} du lieu
                   </p>
                   <p style={{ color: '#666' }}>
                     👥 {hebergement.capacite}
