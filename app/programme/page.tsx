@@ -17,7 +17,7 @@ export default function Programme() {
       color: '#c9a961',
       location: "L'Orangerie du Moulin - 77620 Bransles",
       timeline: [
-        { time: '14h00', title: "Verre d'accueil", desc: '', icon: '🍾' },
+        { time: '14h30', title: "Verre d'accueil", desc: '', icon: '🍾' },
         { time: '15h00', title: 'Cérémonie', desc: '', icon: '💒' },
         { time: '18h00', title: "Vin d'honneur", desc: '', icon: '🍷' },
         { time: '20h00', title: 'Repas', desc: '', icon: '🍽️' },
